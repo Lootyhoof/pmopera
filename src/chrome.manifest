@@ -1,0 +1,4 @@
+skin browser      PMOpera chrome/browser/
+skin communicator PMOpera chrome/communicator/
+skin mozapps      PMOpera chrome/mozapps/
+skin global       PMOpera chrome/global/ 
