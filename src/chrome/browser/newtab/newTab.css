@@ -103,13 +103,17 @@
 
 /* CELLS */
 .newtab-cell {
-  -moz-margin-end: 32px;
-  background-color: transparent;
+  -moz-margin-end: 20px;
+  background-color: rgba(255,255,255,.2);
+  border: 1px solid;
+  border-color: rgba(8,22,37,.12) rgba(8,22,37,.14) rgba(8,22,37,.16);
+  border-radius: 1px;
+  transition: border-color 100ms ease-out;
 }
 
 .newtab-cell:empty {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 3px;
+  border: 1px dashed;
+  border-color: rgba(8,22,37,.15) rgba(8,22,37,.17) rgba(8,22,37,.19);
 }
 
 .newtab-cell:last-child {
@@ -117,7 +121,7 @@
 }
 
 .newtab-cell:hover:not(:empty):not([dragged]) {
-  border-color: #7f7f7f;
+  border-color: rgba(8,22,37,.25) rgba(8,22,37,.27) rgba(8,22,37,.3);
 }
 
 /* SITES */
@@ -140,34 +144,14 @@
   background-clip: padding-box;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 1px solid rgba(0, 0, 0, 0.4);
-  border-radius: 3px;
-  transition: top 0.3s, left 0.3s, box-shadow 0.3s, opacity 0.3s;
-  margin-bottom: 10px;
-  opacity: 1 !important;
-}
-
-.newtab-thumbnail:hover {
-  box-shadow: 0 0 10px hsla(0, 0%, 0%, .2);
-}
-
-.newtab-link:-moz-focusring  {
-  outline: none !important;
-  border: 0px solid #e0e0e0 !important;
-}
-
-.newtab-link:-moz-focusring .newtab-thumbnail {
-  border: 1px solid rgb(77, 144, 254) !important;
 }
 
 /* TITLES */
 .newtab-title {
   padding: 0 8px;
-  background-color: transparent;
-  color: #0C0C0C;
-  margin-bottom: -14px;
+  background-color: rgba(248,249,251,.95);
+  color: #1f364c;
   line-height: 24px;
-  text-align: center;
 }
 
 /* CONTROLS */
