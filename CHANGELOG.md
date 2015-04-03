@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.0.2
+- shade verifiedDomain domains
+- fix newtab quickdial titles
+
 ### 1.0.1
 - add mixed padlock state
 
