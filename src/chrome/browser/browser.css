@@ -1101,6 +1101,10 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
   color: #3D993F;
 }
 
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain {
+  color: #3D6F99;
+}
+
 #identity-box:-moz-focusring {
   outline: 1px dotted #000;
   outline-offset: -3px;
