@@ -12,7 +12,18 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @namespace html url("http://www.w3.org/1999/xhtml");
 
+/* Make titlebar text light/dark depending on persona */
+@media all and (-moz-windows-theme: aero), (-moz-windows-glass), all and (-moz-windows-compositor) {
+  #main-window[sizemode="normal"]:-moz-lwtheme:after{
+    color: inherit !important;
+    text-shadow: inherit !important;
+  }
+}
 
+#main-window[sizemode="maximized"]:-moz-lwtheme:after{
+  color: inherit !important;
+  text-shadow: inherit !important;
+}
 
 #menubar-items {
   -moz-box-orient: vertical; /* for flex hack */
@@ -100,6 +111,19 @@
   box-shadow: none !important;
 }
 
+#navigator-toolbox[tabsontop="true"]:-moz-lwtheme > #nav-bar,
+#navigator-toolbox[tabsontop="true"]:not([customizing]):-moz-lwtheme > #nav-bar[collapsed="true"] + toolbar,
+#navigator-toolbox[tabsontop="true"]:not([customizing]):-moz-lwtheme > #nav-bar[collapsed="true"] + #customToolbars + #PersonalToolbar {
+  background-image: linear-gradient(rgba(250,250,250,1), rgba(250,250,250,0));
+}
+
+#navigator-toolbox[tabsontop=false]:-moz-lwtheme > #nav-bar,
+#navigator-toolbox[tabsontop=false]:not([customizing]):-moz-lwtheme > #nav-bar[collapsed="true"] + toolbar,
+#navigator-toolbox[tabsontop=false]:not([customizing]):-moz-lwtheme > #nav-bar[collapsed="true"] + #customToolbars + #PersonalToolbar {
+  background-image: none;
+  box-shadow: none;
+}
+
 #nav-bar {
   min-height: 36px;
   -moz-padding-start: 4px;
@@ -137,6 +161,11 @@
     margin-bottom: 8px !important;
     padding-bottom: 0px !important;
   }
+}
+
+#appmenu-button:-moz-lwtheme {
+  color: inherit;
+  text-shadow: inherit;
 }
 
 #appmenu-button:hover:not(:active):not([open]) {
@@ -481,8 +510,8 @@ toolbar menupopup {
 }
 
 .bookmark-item:-moz-lwtheme {
-  color: inherit;
-  text-shadow: inherit;
+  color: inherit !important;
+  text-shadow: inherit !important;
 }
 
 #wrapper-personal-bookmarks[place="palette"] > .toolbarpaletteitem-box {
@@ -1556,7 +1585,7 @@ richlistitem[type~="action"][actiontype="switchtab"][selected="true"] > .ac-url-
 /* Tabstrip */
 
 #navigator-toolbox[tabsontop=true] > #TabsToolbar {
-  margin-bottom: -2px;
+  margin-bottom: -1px;
 }
 
 @media not all and (-moz-windows-compositor) {
@@ -1650,6 +1679,10 @@ richlistitem[type~="action"][actiontype="switchtab"][selected="true"] > .ac-url-
   -moz-margin-end: -1px;
 }
 
+.tabbrowser-tabs {
+  max-height:29px !important;
+}
+
 .tabbrowser-tabs > .tabbrowser-tab:first-child > .tab-stack > .tab-content:not([selected="true"]) {
   -moz-border-image: url("chrome://browser/skin/tabbrowser/tab.png") 2 3 fill repeat stretch;
 }
@@ -1700,8 +1733,8 @@ richlistitem[type~="action"][actiontype="switchtab"][selected="true"] > .ac-url-
 }
 
 .tabbrowser-tab:-moz-lwtheme {
-  color: inherit;
-  text-shadow: inherit;
+  color: black;
+  text-shadow: none;
 }
 
 .tabbrowser-tab .tab-text {
@@ -1852,7 +1885,7 @@ richlistitem[type~="action"][actiontype="switchtab"][selected="true"] > .ac-url-
 
 @media (-moz-windows-compositor) {
   @media not all and (-moz-windows-glass) {
-    .tabs-newtab-button {
+    .tabs-newtab-button:not(:-moz-lwtheme-brighttext) {
         list-style-image: url(chrome://browser/skin/tabbrowser/addwin.png) !important;
 		-moz-image-region: rect(0px, 18px, 18px, 0px) !important;
     }
@@ -1867,7 +1900,7 @@ richlistitem[type~="action"][actiontype="switchtab"][selected="true"] > .ac-url-
   }
 }
 
-.tabs-newtab-button {
+.tabs-newtab-button:not(:-moz-lwtheme-darktext) {
   -moz-appearance: none; 
   border: 0 !important;
   -moz-padding-start: 7px !important;
@@ -1923,13 +1956,13 @@ richlistitem[type~="action"][actiontype="switchtab"][selected="true"] > .ac-url-
 
 @media (-moz-windows-compositor) {
   @media not all and (-moz-windows-glass) {
-    #alltabs-button {
+    #alltabs-button:not(:-moz-lwtheme-brighttext) {
         list-style-image: url(chrome://browser/skin/tabbrowser/tab_listwin.png) !important;
     }
   }
 }
 
-#alltabs-button {
+#alltabs-button:not(:-moz-lwtheme-darktext) {
   list-style-image: url(chrome://browser/skin/tabbrowser/tab_list.png);
 }
 
@@ -2416,6 +2449,23 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
   background-color: rgba(27%,27%,27%,.65);
 }
 
+.KUI-panel-closebutton {
+  list-style-image: url(KUI-close.png);
+  -moz-appearance: none;
+  border: none;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.KUI-panel-closebutton:not(:hover) {
+  opacity: .6;
+}
+
+.KUI-panel-closebutton > .toolbarbutton-icon {
+  margin: 0;
+}
+
 /* Ctrl-Tab */
 
 #ctrlTab-panel {
@@ -2464,6 +2514,64 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 
 #ctrlTab-showAll {
   margin-top: .5em;
+}
+
+/* All Tabs */
+
+#allTabs-panel {
+  padding-bottom: 10px;
+  -moz-appearance: none;
+  border: none;
+  background: -moz-Dialog;
+  color: -moz-dialogText;
+}
+
+#allTabs-meta {
+  margin: 10px;
+}
+
+#allTabs-filter {
+  -moz-margin-start: 24px;
+  -moz-margin-end: 0;
+}
+
+#allTabs-tab-close-button > .toolbarbutton-icon {
+  margin: 0;
+}
+
+/* Make sure the allTab previews always have regular close buttons */
+#allTabs-tab-close-button:-moz-lwtheme-brighttext {
+  list-style-image: url("chrome://global/skin/icons/close.png");
+}
+
+.allTabs-favicon[src] {
+  background-color: white;
+  width: 22px;
+  height: 22px;
+  padding-top: 1px;
+  padding-bottom: 5px;
+  -moz-padding-start: 1px;
+  -moz-padding-end: 5px;
+  margin-top: -2px;
+  -moz-margin-start: -2px;
+}
+
+.allTabs-favicon[src]:-moz-locale-dir(rtl) {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 4px;
+}
+
+.allTabs-preview-inner > .tabPreview-canvas {
+  background-color: rgb(60%,60%,60%);
+  box-shadow: 0 0 1.5px ThreeDShadow;
+}
+
+.allTabs-preview:not(:hover):not([closebuttonhover]) > html|canvas {
+  opacity: .8;
+}
+
+.allTabs-preview:focus > * > .allTabs-preview-inner {
+  outline: 1px dotted -moz-dialogText;
 }
 
 /* Add-on bar */
@@ -3369,8 +3477,34 @@ chatbox {
   background-clip: padding-box;
 }
 
+#nav-bar:-moz-lwtheme,
+#customToolbars:-moz-lwtheme,
+#PersonalToolbar:-moz-lwtheme,
+toolbar:-moz-lwtheme,
+#main-window[tabsontop=false][sizemode=maximized] #nav-bar,
+#main-window[tabsontop=false][sizemode=maximized] #customToolbars,
+#main-window[tabsontop=false][sizemode=maximized] #PersonalToolbar,
+#main-window[tabsontop=false][sizemode=maximized] toolbar {
+  border: none !important;
+}
+
 .tabbrowser-tab:not(:-moz-lwtheme) {
   text-shadow: none;
+}
+
+#navigator-toolbox[tabsontop=false] > #toolbar-menubar[autohide=false] ~ #nav-bar {
+  border-top: none;
+}
+
+#navigator-toolbox[tabsontop=false][sizemode=maximized] > #toolbar-menubar[autohide=false] {
+  border-left: none !important;
+  border-right: none !important;
+}  
+
+#main-window[tabsontop=false] #toolbar-menubar[autohide=false]:not(:-moz-lwtheme){
+  border-top: 1px solid rgba(130, 130, 130, 0.72) !important;
+  border-left: 1px solid rgba(130, 130, 130, 0.72) !important;
+  border-right: 1px solid rgba(130, 130, 130, 0.72) !important;
 }
 
 #main-window[sizemode=fullscreen]:not(:-moz-lwtheme) {
@@ -3419,7 +3553,7 @@ chatbox {
     -moz-border-top-colors: rgb(37, 44, 51) rgba(255,255,255,.6);
   }
 
-  #toolbar-menubar:not(:-moz-lwtheme),
+  #toolbar-menubar[tabsontop=true]:not(:-moz-lwtheme),
   #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme) {
     background-color: transparent !important;
     color: black;
@@ -3504,6 +3638,12 @@ chatbox {
     height: 7px;
     border-radius: 0 0 3px 3px;
   }
+  
+  #main-window[tabsontop=false] #toolbar-menubar:not(:-moz-lwtheme),
+  #main-window[tabsontop=false] #TabsToolbar:not(:-moz-lwtheme) {
+    background-color: #F5F6F7 !important;
+    text-shadow: none !important;
+  }
 }
 
 @media not all and (-moz-windows-compositor) {
@@ -3512,7 +3652,7 @@ chatbox {
     margin-bottom: 0px !important;
   }
 
-  #main-window {
+  #main-window:not(:-moz-lwtheme) {
     background-image: linear-gradient(#2068CC, #1F67CC);
   }
 
@@ -3533,8 +3673,7 @@ chatbox {
     -moz-appearance: none!important;
     margin-top: 2px!important;
   }
-  #main-window[tabsontop=false] #titlebar-content:-moz-lwtheme,
-  #main-window[sizemode=normal] #titlebar-content:-moz-lwtheme,
+  
   #titlebar-content:not(:-moz-lwtheme) {
     background-image: linear-gradient(#3173D0, #256BCD, #2068CC)!important;
     box-shadow: 0 1px 0 0 #3983D6 inset, 0 -1px 0 0 #47A1E2, 0 -2px 0 0 #2062BE!important;
