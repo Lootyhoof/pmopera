@@ -3911,13 +3911,13 @@ window[tabsontop] .tabbrowser-tabs:not([highlightProtected]) > .tabbrowser-tab[p
   margin-bottom: -1px !important;
 }
 
-#sidebars-titlebutton > label {
+#sidebars-titlebutton:not(:-moz-lwtheme) > label {
   padding: 0px !important;
   margin: 1px 2px 2px 2px !important;
   font-weight: 600 !important;
   color: #444444 !important;
   -moz-padding-end: 12px !important;
-  background: url(chrome://global/skin/icons/dropdown.png) right center no-repeat !important;
+  background: url(chrome://browser/skin/toolbarbutton-dropdown-arrow.png) right center no-repeat !important;
 }
 
 #aios-toggle-toolbar {
@@ -4040,29 +4040,29 @@ window[aiosOrient="right"] #sidebar-splitter[orient="horizontal"] grippy {
   margin-bottom: 6px !important;
 }
 
-#aios-toolbox-right toolbarbutton:hover,
-#aios-toolbox-right toolbarbutton[open="true"],
-#aios-toolbox-right toolbarbutton[checked="true"] {
+#aios-toolbox-right:not(:-moz-lwtheme) toolbarbutton:hover,
+#aios-toolbox-right:not(:-moz-lwtheme) toolbarbutton[open="true"],
+#aios-toolbox-right:not(:-moz-lwtheme) toolbarbutton[checked="true"] {
   background: transparent!important;
   border-image: url("chrome://global/skin/splitter/panel-right-hover.png") 2 0 fill !important;
   box-shadow: none !important;
 }
 
-#aios-toolbox-right toolbarbutton:hover:active:not([disabled="true"]) {
+#aios-toolbox-right:not(:-moz-lwtheme) toolbarbutton:hover:active:not([disabled="true"]) {
   border-image: url("chrome://global/skin/splitter/panel-right-selected.png") 2 0 fill !important;
 }
 
-#aios-toolbox-sidebartop > #aios-toolbar {
+#aios-toolbox-sidebartop:not(:-moz-lwtheme) > #aios-toolbar:not(:-moz-lwtheme) {
   background-image: linear-gradient(#EBEEF8, #E3E7F3, #DCE1EE) !important;
   box-shadow: 0 1px 0px #FAFBFD inset, 0 -1px 0px #9397A2 inset !important;
 }
 
-#aios-toolbox-sidebartop2 > #aios-toolbar {
+#aios-toolbox-sidebartop2:not(:-moz-lwtheme) > #aios-toolbar:not(:-moz-lwtheme) {
   background-color: #DCE1EF !important;
   box-shadow: 0 1px 0px #EEF1F9 inset, 0 -1px 0px #9397A2 inset !important;
 }
 
-#aios-toolbox-sidebarbottom > #aios-toolbar {
+#aios-toolbox-sidebarbottom:not(:-moz-lwtheme) > #aios-toolbar:not(:-moz-lwtheme) {
   background-image: linear-gradient(#CBD0DF, #DBE1F1, #D1D7E6)!important;
   box-shadow: 0 1px 0px #BEC3D1 inset !important;
 }
@@ -4131,6 +4131,16 @@ window[aiosOrient="right"] #sidebar-splitter[orient="horizontal"] grippy {
   border: 1px solid rgba(0,0,0,.43) !important;
   background: transparent !important;
 }
+
+toolbarbutton.aios-tbutton:not([type="menu-button"]),toolbarbutton.aios-tbutton[type="menu-button"]{
+  list-style-image: url("chrome://aios/skin/icons/toolbar_windows.png") !important;
+}
+
+#aios-toolbar #bookmarks-button,
+#aios-toolbar #history-button,
+#aios-toolbar #downloads-button {
+  list-style-image: url("chrome://browser/skin/Toolbar.png") !important;
+}  
 
 /* Toolbar Appmenu Button */
 #toolbar-appmenu-button > .toolbarbutton-icon {
