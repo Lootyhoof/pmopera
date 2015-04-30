@@ -78,8 +78,6 @@
   #main-window[tabsintitlebar]:not([inFullscreen]) #titlebar-buttonbox {
     margin-top: -3px !important;
   }
-}
-
 @media not all and (-moz-windows-compositor) {
   #main-window[tabsintitlebar] #appmenu-button {
     margin: 0 0 8px 0 !important;
@@ -3553,11 +3551,12 @@ toolbar:-moz-lwtheme,
     -moz-border-top-colors: rgb(37, 44, 51) rgba(255,255,255,.6);
   }
 
-  #toolbar-menubar[tabsontop=true]:not(:-moz-lwtheme),
+  #main-window[tabsontop=true] #toolbar-menubar:not(:-moz-lwtheme),
+  #toolbar-menubar[autohide=true]:not(:-moz-lwtheme),
   #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme) {
-    background-color: transparent !important;
+    background: transparent !important;
     color: black;
-    text-shadow: 0 0 .5em white, 0 0 .5em white, 0 1px 0 rgba(255,255,255,.4);
+    text-shadow: 0 0 .5em white, 0 0 .5em white, 0 1px 0 rgba(255,255,255,.4) !important;
     border-left-style: none !important;
     border-right-style: none !important;
 	padding-top: 0 !important;
@@ -3641,8 +3640,8 @@ toolbar:-moz-lwtheme,
   
   #main-window[tabsontop=false] #toolbar-menubar:not(:-moz-lwtheme),
   #main-window[tabsontop=false] #TabsToolbar:not(:-moz-lwtheme) {
-    background-color: #F5F6F7 !important;
-    text-shadow: none !important;
+    background-color: #F5F6F7;
+    text-shadow: none;
   }
 }
 
