@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.0.3
+- persona support
+
 ### 1.0.2
 - shade verifiedDomain domains
 - fix newtab quickdial titles
