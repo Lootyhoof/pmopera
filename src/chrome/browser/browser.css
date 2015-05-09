@@ -78,6 +78,7 @@
   #main-window[tabsintitlebar]:not([inFullscreen]) #titlebar-buttonbox {
     margin-top: -3px !important;
   }
+}
 @media not all and (-moz-windows-compositor) {
   #main-window[tabsintitlebar] #appmenu-button {
     margin: 0 0 8px 0 !important;
