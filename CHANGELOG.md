@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.0.4
+- fix for operating systems without glass
+
 ### 1.0.3
 - persona support
 
