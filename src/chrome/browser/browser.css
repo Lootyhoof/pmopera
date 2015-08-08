@@ -3712,65 +3712,70 @@ toolbar:-moz-lwtheme,
 }
 
 @media not all and (-moz-windows-compositor) {
-  #main-window[sizemode="normal"] #toolbar-menubar:not([autohide="true"]) {
-    margin-top: 6px !important;
-    margin-bottom: 0px !important;
-  }
+  @media (-moz-os-version: windows-xp),
+         (-moz-os-version: windows-vista),
+         (-moz-os-version: windows-win7) {
+    #main-window[sizemode="normal"] #toolbar-menubar:not([autohide="true"]) {
+      margin-top: 6px !important;
+      margin-bottom: 0px !important;
+    }
 
-  #main-window:not(:-moz-lwtheme) {
-    background-image: linear-gradient(#2068CC, #1F67CC);
-  }
+    #main-window:not(:-moz-lwtheme) {
+      background-image: linear-gradient(#2068CC, #1F67CC);
+    }
 
+    #toolbar-menubar[autohide=true] {
+      background-color: transparent !important;
+    }
+
+    #navigator-toolbox {
+      border-style: none;
+    }
+
+    window[sizemode=normal] #titlebar-content {
+      -moz-appearance: none!important;
+      margin-top: 2px!important;
+    }
+  
+    #titlebar-content:not(:-moz-lwtheme) {
+      background-image: linear-gradient(#3173D0, #256BCD, #2068CC)!important;
+      box-shadow: 0 1px 0 0 #3983D6 inset, 0 -1px 0 0 #47A1E2, 0 -2px 0 0 #2062BE!important;
+    }
+
+    #main-window[sizemode="normal"] #navigator-toolbox {
+       margin-top: -6px !important;
+       background-image: linear-gradient(#236ACD, #2068CC, #1F67CC)!important;
+    }
+
+    window[sizemode="normal"] #titlebar-content {
+      padding: 0 3px 0 0!important;
+    }
+    window[sizemode="maximized"] #titlebar-content {
+      margin-top: 0 !important;
+      padding: 0!important;
+    }
+
+    window[sizemode="normal"] #titlebar-buttonbox {
+      margin-top: -1px !important;
+    }
+
+    #titlebar-buttonbox {
+      -moz-appearance: none !important;
+      padding-bottom: 8px !important;
+    }
+
+    #titlebar-min:-moz-locale-dir(rtl),
+    #titlebar-max:-moz-locale-dir(rtl),
+    #restore-button:-moz-locale-dir(rtl),
+    #titlebar-close:-moz-locale-dir(rtl) {
+      transform: scaleX(-1);
+    }
+  }
+  
   #toolbar-menubar:not([autohide=true]):not(:-moz-lwtheme),
   #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme) {
     -moz-binding: url("chrome://global/content/bindings/toolbar.xml#toolbar-drag");
     background-color: transparent;
-  }
-  #toolbar-menubar[autohide=true] {
-    background-color: transparent !important;
-  }
-
-  #navigator-toolbox {
-    border-style: none;
-  }
-
-  window[sizemode=normal] #titlebar-content {
-    -moz-appearance: none!important;
-    margin-top: 2px!important;
-  }
-  
-  #titlebar-content:not(:-moz-lwtheme) {
-    background-image: linear-gradient(#3173D0, #256BCD, #2068CC)!important;
-    box-shadow: 0 1px 0 0 #3983D6 inset, 0 -1px 0 0 #47A1E2, 0 -2px 0 0 #2062BE!important;
-  }
-
-  #main-window[sizemode="normal"] #navigator-toolbox {
-     margin-top: -6px !important;
-     background-image: linear-gradient(#236ACD, #2068CC, #1F67CC)!important;
-  }
-
-  window[sizemode="normal"] #titlebar-content {
-    padding: 0 3px 0 0!important;
-  }
-  window[sizemode="maximized"] #titlebar-content {
-    margin-top: 0 !important;
-    padding: 0!important;
-  }
-
-  window[sizemode="normal"] #titlebar-buttonbox {
-    margin-top: -1px !important;
-  }
-
-  #titlebar-buttonbox {
-    -moz-appearance: none !important;
-    padding-bottom: 8px !important;
-  }
-
-  #titlebar-min:-moz-locale-dir(rtl),
-  #titlebar-max:-moz-locale-dir(rtl),
-  #restore-button:-moz-locale-dir(rtl),
-  #titlebar-close:-moz-locale-dir(rtl) {
-    transform: scaleX(-1);
   }
 }
 
