@@ -1565,6 +1565,33 @@ richlistitem[type~="action"][actiontype="switchtab"][selected="true"] > .ac-url-
   margin-bottom: -1px;
 }
 
+#TabsToolbar toolbarbutton ~ .tabbrowser-tabs {
+  -moz-margin-start: 0;
+}
+
+#main-window[sizemode="normal"] .tabbrowser-tabs {
+  -moz-margin-start: 0;
+}
+
+#main-window[sizemode="maximized"] .tabbrowser-tabs {
+  -moz-margin-start: -1px;
+}
+
+@media (-moz-os-version: windows-win10) {
+  #main-window[sizemode="normal"] .tabbrowser-tabs {
+    -moz-margin-start: -1px;
+  }
+}
+
+@media not all and (-moz-windows-compositor) {
+  #main-window[sizemode="normal"] .tabbrowser-tabs {
+    -moz-margin-start: -1px;
+  }
+  #main-window[sizemode="maximized"] .tabbrowser-tabs {
+    -moz-margin-start: -2px;
+  }
+}
+
 @media not all and (-moz-windows-compositor) {
   #toolbar-menubar:not([autohide=true]):not(:-moz-lwtheme):-moz-system-metric(windows-default-theme),
   #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme):-moz-system-metric(windows-default-theme),
