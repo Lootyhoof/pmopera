@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.1.2
+- (Win10) shade window background on Pale Moon 26 builds later than b2
+- force tabbar to be flush with the window edge
+
 ### 1.1.1
 - fix vertical toolbar borders
 
