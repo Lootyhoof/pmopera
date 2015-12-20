@@ -1,5 +1,10 @@
 # Changelog
 
+### 1.2.0
+- (PM26) add history menu button
+- show more icons in history/bookmarks menus
+- remove double padlocks
+
 ### 1.1.2
 - (Win10) shade window background on Pale Moon 26 builds later than b2
 - force tabbar to be flush with the window edge
