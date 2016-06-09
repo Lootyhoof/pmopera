@@ -43,8 +43,6 @@ notification[type="critical"] .messageImage,
 
 .messageCloseButton {
   -moz-appearance: none;
-  list-style-image: url("chrome://global/skin/icons/close.png");
-  -moz-image-region: rect(0, 16px, 16px, 0);
   padding: 0px;
   -moz-margin-start: 7px;
   -moz-margin-end: 7px;
@@ -52,14 +50,6 @@ notification[type="critical"] .messageImage,
   box-shadow: none !important;
   background: none !important;
   border-image: none !important;
-}
-
-.messageCloseButton:hover {
-  -moz-image-region: rect(0, 32px, 16px, 16px);
-}
-
-.messageCloseButton:hover:active {
-  -moz-image-region: rect(0, 48px, 16px, 32px);
 }
 
 popupnotification .messageCloseButton {
@@ -133,9 +123,4 @@ XXX: apply styles to all themes until bug 509642 is fixed
 .popup-notification-closebutton {
   -moz-margin-end: -12px;
   margin-top: -6px;
-}
-
-.popup-notification-closeitem {
-  list-style-image: url("chrome://global/skin/icons/close.png");
-  -moz-image-region: rect(0, 16px, 16px, 0);
 }
