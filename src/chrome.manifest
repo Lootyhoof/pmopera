@@ -2,5 +2,3 @@ skin browser      PMOpera chrome/browser/
 skin communicator PMOpera chrome/communicator/
 skin mozapps      PMOpera chrome/mozapps/
 skin global       PMOpera chrome/global/ 
-skin appver       PMOpera chrome/appver/25/ appversion<=26.0.0b2
-skin appver       PMOpera chrome/appver/26/ appversion>26.0.0b2
