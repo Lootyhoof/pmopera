@@ -615,7 +615,7 @@ menuitem.bookmark-item {
   list-style-image: url("chrome://browser/skin/Toolbar.png");
 }
 
-.toolbarbutton-1:-moz-lwtheme-brighttext {
+toolbar[brighttext] .toolbarbutton-1 {
   list-style-image: url("chrome://browser/skin/Toolbar-inverted.png");
 }
 
@@ -829,7 +829,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   list-style-image: url("chrome://browser/skin/Toolbar.png");
 }
 
-#bookmarks-menu-button.bookmark-item:-moz-lwtheme-brighttext {
+toolbar[brighttext] #bookmarks-menu-button.bookmark-item {
   list-style-image: url("chrome://browser/skin/Toolbar-inverted.png");
 }
 
@@ -897,7 +897,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 #TabsToolbar > #tabview-button:-moz-system-metric(windows-compositor):not(:-moz-lwtheme),
 #TabsToolbar > toolbarpaletteitem > #tabview-button:-moz-system-metric(windows-compositor):not(:-moz-lwtheme),
-#tabview-button:-moz-lwtheme-brighttext {
+toolbar[brighttext] #tabview-button {
   list-style-image: url(chrome://browser/skin/tabview/tabview-inverted.png);
 }
 
@@ -1849,14 +1849,14 @@ richlistitem[type~="action"][actiontype="switchtab"][selected="true"] > .ac-url-
   -moz-image-region: rect(0px, 22px, 11px, 11px);
 }
 
-.tabbrowser-arrowscrollbox > .scrollbutton-up:-moz-lwtheme-brighttext,
-.tabbrowser-arrowscrollbox > .scrollbutton-down:-moz-lwtheme-brighttext {
+toolbar[brighttext] .tabbrowser-arrowscrollbox > .scrollbutton-up,
+toolbar[brighttext] .tabbrowser-arrowscrollbox > .scrollbutton-down {
   list-style-image: url(chrome://browser/skin/tabbrowser/tab-arrow-left.png);
   -moz-image-region: rect(0px, 11px, 11px, 0px);
 }
 	
-.tabbrowser-arrowscrollbox > .scrollbutton-up:-moz-lwtheme-brighttext:not([disabled]):hover,
-.tabbrowser-arrowscrollbox > .scrollbutton-down:-moz-lwtheme-brighttext:not([disabled]):hover {
+toolbar[brighttext] .tabbrowser-arrowscrollbox > .scrollbutton-up:not([disabled]):hover,
+toolbar[brighttext] .tabbrowser-arrowscrollbox > .scrollbutton-down:not([disabled]):hover {
   -moz-image-region: rect(0px, 22px, 11px, 11px);
 }
 
@@ -1922,16 +1922,16 @@ richlistitem[type~="action"][actiontype="switchtab"][selected="true"] > .ac-url-
   -moz-image-region: rect(0px, 54px, 18px, 36px);
 }
 
-.tabs-newtab-button:-moz-lwtheme-brighttext {
+toolbar[brighttext] .tabs-newtab-button {
    list-style-image: url(chrome://browser/skin/tabbrowser/add.png);
 	-moz-image-region: rect(0px, 18px, 18px, 0px);
 }
 	
-.tabs-newtab-button:-moz-lwtheme-brighttext:hover {
+toolbar[brighttext] .tabs-newtab-button:hover {
   -moz-image-region: rect(0px, 36px, 18px, 18px);
 }
 
-.tabs-newtab-button:-moz-lwtheme-brighttext:hover:active {
+toolbar[brighttext] .tabs-newtab-button:hover:active {
   -moz-image-region: rect(0px, 54px, 18px, 36px);
 }
 
@@ -1968,18 +1968,18 @@ richlistitem[type~="action"][actiontype="switchtab"][selected="true"] > .ac-url-
   -moz-image-region: rect(0px, 36px, 18px, 18px);
 }
 
-#TabsToolbar > #new-tab-button:-moz-lwtheme-brighttext,
-#TabsToolbar > toolbarpaletteitem > #new-tab-button:-moz-lwtheme-brighttext,
-#navigator-toolbox[tabsontop=false] #TabsToolbar > #new-tab-button:-moz-lwtheme-brighttext,
-#navigator-toolbox[tabsontop=false] #TabsToolbar > toolbarpaletteitem > #new-tab-button:-moz-lwtheme-brighttext {
+toolbar[brighttext] #TabsToolbar > #new-tab-button,
+toolbar[brighttext] #TabsToolbar > toolbarpaletteitem > #new-tab-button,
+toolbar[brighttext] #navigator-toolbox[tabsontop=false] #TabsToolbar > #new-tab-button,
+toolbar[brighttext] #navigator-toolbox[tabsontop=false] #TabsToolbar > toolbarpaletteitem > #new-tab-button {
   list-style-image: url(chrome://browser/skin/tabbrowser/add.png);
   -moz-image-region: rect(0px, 18px, 18px, 0px);
 }
 	
-#TabsToolbar > #new-tab-button:-moz-lwtheme-brighttext:hover,
-#TabsToolbar > toolbarpaletteitem > #new-tab-button:-moz-lwtheme-brighttext:hover,
-#navigator-toolbox[tabsontop=false] #TabsToolbar > #new-tab-button:-moz-lwtheme-brighttext:hover,
-#navigator-toolbox[tabsontop=false] #TabsToolbar > toolbarpaletteitem > #new-tab-button:-moz-lwtheme-brighttext:hover {
+toolbar[brighttext] #TabsToolbar > #new-tab-button:hover,
+toolbar[brighttext] #TabsToolbar > toolbarpaletteitem > #new-tab-button:hover,
+toolbar[brighttext] #navigator-toolbox[tabsontop=false] #TabsToolbar > #new-tab-button:hover,
+toolbar[brighttext] #navigator-toolbox[tabsontop=false] #TabsToolbar > toolbarpaletteitem > #new-tab-button:hover {
   -moz-image-region: rect(0px, 36px, 18px, 18px);
 }
 
@@ -1993,7 +1993,7 @@ richlistitem[type~="action"][actiontype="switchtab"][selected="true"] > .ac-url-
   list-style-image: url(chrome://browser/skin/tabbrowser/tab_listwin.png);
 }
 
-#alltabs-button:-moz-lwtheme-brighttext {
+toolbar[brighttext] #alltabs-button {
   list-style-image: url(chrome://browser/skin/tabbrowser/tab_list.png);
 }
 
