@@ -2,3 +2,5 @@ skin browser      PMOpera chrome/browser/
 skin communicator PMOpera chrome/communicator/
 skin mozapps      PMOpera chrome/mozapps/
 skin global       PMOpera chrome/global/ 
+skin os           PMOpera chrome/os/winnt/ os=WINNT
+skin os           PMOpera chrome/os/linux/ os=Linux
