@@ -3710,15 +3710,7 @@ toolbar:-moz-lwtheme,
     .titlebar-button:not(:hover) > .toolbarbutton-icon:-moz-window-inactive {
       opacity: 0.5;
     }
-
-    #titlebar-close:hover {
-      background-color: hsl(355, 86%, 49%);
-    }
-
-    #titlebar-close:hover:active {
-      background-color: hsl(355, 82%, 69%);
-    }
-          
+   
     /* dark persona/titlebar */
     .titlebar-button:-moz-lwtheme-brighttext:hover,
     #main-window[darkwindowframe="true"] .titlebar-button:not(:-moz-lwtheme):hover {
