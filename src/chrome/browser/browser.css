@@ -1975,18 +1975,18 @@ toolbar[brighttext] .tabs-newtab-button:hover:active {
   -moz-image-region: rect(0px, 36px, 18px, 18px);
 }
 
-toolbar[brighttext] #TabsToolbar > #new-tab-button,
-toolbar[brighttext] #TabsToolbar > toolbarpaletteitem > #new-tab-button,
-toolbar[brighttext] #navigator-toolbox[tabsontop=false] #TabsToolbar > #new-tab-button,
-toolbar[brighttext] #navigator-toolbox[tabsontop=false] #TabsToolbar > toolbarpaletteitem > #new-tab-button {
+#TabsToolbar[brighttext] > #new-tab-button,
+#TabsToolbar[brighttext] > toolbarpaletteitem > #new-tab-button,
+#navigator-toolbox[tabsontop=false] #TabsToolbar[brighttext] > #new-tab-button,
+#navigator-toolbox[tabsontop=false] #TabsToolbar[brighttext] > toolbarpaletteitem > #new-tab-button {
   list-style-image: url(chrome://browser/skin/tabbrowser/add.png);
   -moz-image-region: rect(0px, 18px, 18px, 0px);
 }
 	
-toolbar[brighttext] #TabsToolbar > #new-tab-button:hover,
-toolbar[brighttext] #TabsToolbar > toolbarpaletteitem > #new-tab-button:hover,
-toolbar[brighttext] #navigator-toolbox[tabsontop=false] #TabsToolbar > #new-tab-button:hover,
-toolbar[brighttext] #navigator-toolbox[tabsontop=false] #TabsToolbar > toolbarpaletteitem > #new-tab-button:hover {
+#TabsToolbar[brighttext] > #new-tab-button:hover,
+#TabsToolbar[brighttext] > toolbarpaletteitem > #new-tab-button:hover,
+#navigator-toolbox[tabsontop=false] #TabsToolbar[brighttext] > #new-tab-button:hover,
+#navigator-toolbox[tabsontop=false] #TabsToolbar[brighttext] > toolbarpaletteitem > #new-tab-button:hover {
   -moz-image-region: rect(0px, 36px, 18px, 18px);
 }
 
