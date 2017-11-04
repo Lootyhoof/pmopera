@@ -2536,6 +2536,16 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
   border-image: none !important;
 }
 
+toolbar[mode="text"] #addonbar-closebutton {
+  padding: 0 0 0 5px;
+  margin-left: 0px;
+  margin-right: 1px;
+}
+
+toolbar[mode="text"] #addonbar-closebutton > .toolbarbutton-icon {
+  display: -moz-box;
+}
+
 /* Status panel */
 
 .statuspanel-label {
