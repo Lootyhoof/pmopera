@@ -215,15 +215,24 @@ richlistitem[type="download"] {
 /*** Main indicator icon ***/
 
 #downloads-indicator-icon {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"),
+  background: -moz-image-rect(var(--toolbarbutton-image),
                               0, 108, 18, 90) center no-repeat;
   min-width: 18px;
   min-height: 18px;
 }
 
 toolbar[brighttext] #downloads-indicator-icon {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.png"),
+  background: -moz-image-rect(var(--toolbarbutton-inverted-image),
                               0, 108, 18, 90) center no-repeat;
+}
+
+@media (-moz-os-version: windows-vista),
+       (-moz-os-version: windows-win7) {
+  #toolbar-menubar #downloads-indicator-icon:not(:-moz-lwtheme),
+  #TabsToolbar[tabsontop=true] #downloads-indicator-icon:not(:-moz-lwtheme) {
+    background: -moz-image-rect(var(--toolbarbutton-inverted-image),
+                                0, 108, 18, 90) center no-repeat;
+  }
 }
 
 #downloads-indicator[attention] > #downloads-indicator-anchor > #downloads-indicator-icon {
@@ -231,7 +240,7 @@ toolbar[brighttext] #downloads-indicator-icon {
 }
 
 #downloads-indicator:not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"),
+  background: -moz-image-rect(var(--toolbarbutton-image),
                               0, 108, 18, 90) center no-repeat;
   background-size: 12px;
 }
@@ -373,7 +382,7 @@ toolbar[mode="full"] > #downloads-indicator > .toolbarbutton-text {
 #toolbar-menubar #downloads-indicator:not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter,
 /* This is the case where the downloads indicator is in the tabstrip toolbar with tabs on top. */
 #TabsToolbar[tabsontop=true] #downloads-indicator:not(:-moz-lwtheme):not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
-  background-image: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.png"), 0, 108, 18, 90);
+  background-image: -moz-image-rect(var(--toolbarbutton-inverted-image), 0, 108, 18, 90);
 }
 
 #downloads-indicator-counter {
