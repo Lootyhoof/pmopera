@@ -1,0 +1,53 @@
+#toolbar-menubar:not(:-moz-lwtheme) {
+  -moz-appearance: menubar !important;
+}
+
+#TabsToolbar[tabsontop=true]:not(:-moz-lwtheme) {
+  -moz-appearance: menubar !important;
+  color: -moz-menubartext;
+}
+
+#TabsToolbar {
+  margin-bottom: -3px !important;
+}
+
+/* ::::: app menu button ::::: */
+
+#appmenu-toolbar-button {
+  --appmenu-margin: 3px 3px 3px 2px;
+  -moz-appearance: none;
+  background: var(--appmenu-background) !important;
+  box-shadow: var(--appmenu-box-shadow) !important;
+  color: rgba(12,12,12,.89);
+  padding: var(--appmenu-padding) !important;
+  margin: var(--appmenu-margin) !important;
+  border: 1px solid var(--appmenu-border-color) !important;
+  border-radius: var(--appmenu-border-radius) !important;
+}
+
+#main-window[sizemode=maximized] #appmenu-toolbar-button {
+  --appmenu-margin: 3px 3px 3px 0px;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-left: none !important;
+}
+
+#appmenu-toolbar-button:hover:not(:active):not([open]) {
+  --appmenu-background: var(--appmenu-icon), rgba(255,255,255,.5);
+  --appmenu-box-shadow: 0 1px 0 rgba(254,254,254,.58) inset;
+}
+
+#appmenu-toolbar-button:hover:active,
+#appmenu-toolbar-button[open] {
+  --appmenu-background: var(--appmenu-icon), rgba(243,243,243,.5);
+  --appmenu-box-shadow: 0 1px 0 rgba(227,227,227,.52) inset;
+}
+
+/* Private browsing indicator */
+
+#main-window[privatebrowsingmode=temporary] #toolbar-menubar[autohide="false"] ~ #TabsToolbar::before {
+  display: -moz-box;
+  content: "";
+  background: url("chrome://browser/skin/Privacy-16.png") center no-repeat;
+  width: 32px;
+}
