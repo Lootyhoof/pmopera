@@ -1447,7 +1447,7 @@ richlistitem[type~="action"][actiontype="switchtab"][selected="true"] > .ac-url-
 
 .tabbrowser-tab {
   -moz-appearance: none;
-  margin: 0;
+  margin: 0 0 -1px 0;
   padding: 0;
   border: 0 solid transparent;
   background: transparent;
@@ -1468,10 +1468,6 @@ richlistitem[type~="action"][actiontype="switchtab"][selected="true"] > .ac-url-
   border-width: 2px 3px;
   -moz-margin-start: 0;
   -moz-margin-end: -1px;
-}
-
-.tabbrowser-tabs {
-  max-height:29px !important;
 }
 
 .tabbrowser-tabs > .tabbrowser-tab:first-child > .tab-stack > .tab-content:not([selected="true"]) {
