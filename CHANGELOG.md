@@ -1,5 +1,9 @@
 # Changelog
 
+### 2.0.1
+- don't force tab bar height (fixes Tab Mix Plus)
+- improve findbar persona styling
+
 ### 2.0.0
 - make appmenu more Opera-like
 - improve cross-platform styling
