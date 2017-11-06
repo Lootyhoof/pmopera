@@ -1,7 +1,7 @@
 # Changelog
 
 ### 2.0.1
-- don't force tab bar height (fixes Tab Mix Plus)
+- don't force tab bar height (fixes Tree Style Tab)
 - improve findbar persona styling
 
 ### 2.0.0
