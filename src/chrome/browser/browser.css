@@ -1087,7 +1087,8 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
 }
 
 .ac-result-type-bookmark,
-.autocomplete-treebody::-moz-tree-image(bookmark, treecolAutoCompleteImage) {
+.autocomplete-treebody::-moz-tree-image(bookmark, treecolAutoCompleteImage),
+.private-autocomplete-treebody::-moz-tree-image(bookmark, treecolAutoCompleteImage) {
   list-style-image: url("chrome://browser/skin/places/bookmark.png");
   -moz-image-region: rect(0px 48px 16px 32px);
   width: 16px; 
@@ -1095,14 +1096,16 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
 }
 
 .ac-result-type-keyword,
-.autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage) {
+.autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage),
+.private-autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage) {
   list-style-image: url(chrome://global/skin/icons/Search-glass.png);
   width: 16px; 
   height: 16px;
 }
 
 .ac-result-type-tag,
-.autocomplete-treebody::-moz-tree-image(tag, treecolAutoCompleteImage) {
+.autocomplete-treebody::-moz-tree-image(tag, treecolAutoCompleteImage),
+.private-autocomplete-treebody::-moz-tree-image(tag, treecolAutoCompleteImage) {
   list-style-image: url("chrome://browser/skin/places/tag.png");
   width: 16px; 
   height: 16px;
@@ -1143,23 +1146,27 @@ richlistitem[type~="action"][actiontype="switchtab"][selected="true"] > .ac-url-
     -moz-image-region: rect(11px, 16px, 22px, 0);
  }
 
- .ac-comment[selected="true"],
- .ac-url-text[selected="true"],
- .ac-action-text[selected="true"] {
+.ac-comment[selected="true"],
+.ac-url-text[selected="true"],
+.ac-action-text[selected="true"] {
   color: #FFFFFF !important;
- }
+}
 
-.autocomplete-treebody::-moz-tree-cell-text(treecolAutoCompleteComment) {
+.autocomplete-treebody::-moz-tree-cell-text(treecolAutoCompleteComment),
+.private-autocomplete-treebody::-moz-tree-cell-text(treecolAutoCompleteComment) {
   color: GrayText;
 }
 
 .autocomplete-treebody::-moz-tree-cell-text(suggesthint, treecolAutoCompleteComment),
-.autocomplete-treebody::-moz-tree-cell-text(suggestfirst, treecolAutoCompleteComment) {
+.autocomplete-treebody::-moz-tree-cell-text(suggestfirst, treecolAutoCompleteComment),
+.private-autocomplete-treebody::-moz-tree-cell-text(suggesthint, treecolAutoCompleteComment),
+.private-autocomplete-treebody::-moz-tree-cell-text(suggestfirst, treecolAutoCompleteComment) {
   color: GrayText;
   font-size: smaller;
 }
 
-.autocomplete-treebody::-moz-tree-cell(suggesthint) {
+.autocomplete-treebody::-moz-tree-cell(suggesthint),
+.private-autocomplete-treebody::-moz-tree-cell(suggesthint) {
   border-top: 1px solid GrayText;
 }
 
@@ -1939,6 +1946,12 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 .popup-notification-icon[popupid="addon-install-failed"],
 .popup-notification-icon[popupid="addon-install-complete"] {
   list-style-image: url(chrome://mozapps/skin/extensions/extensionGeneric.png);
+}
+
+.popup-notification-icon[popupid="addon-theme-change"] {
+  list-style-image: url(chrome://mozapps/skin/extensions/themeGeneric.png);
+  width: 32px;
+  height: 32px;
 }
 
 .popup-notification-icon[popupid="click-to-play-plugins"] {
