@@ -1336,6 +1336,12 @@ richlistitem[type~="action"][actiontype="switchtab"][selected="true"] > .ac-url-
   color: #444444;
 }
 
+.browserContainer > findbar {
+  background-color: transparent;
+  color: #000;
+  text-shadow: none;
+}
+
 /* ::::: throbber ::::: */
 
 #navigator-throbber {
