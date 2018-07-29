@@ -9,7 +9,7 @@
   
   <Description about="urn:mozilla:install-manifest">
     <em:id>{a53af763-1a44-4820-b98e-98e62085837f}</em:id>
-    <em:version>2.1.0</em:version>
+    <em:version>2.2.0</em:version>
     <em:name>PMOpera</em:name>
     <em:description>Opera like theme for Pale Moon. Fork of "FXOpera" by dkgo.</em:description>
     <em:creator>Lootyhoof</em:creator>
