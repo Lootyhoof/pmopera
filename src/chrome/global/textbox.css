@@ -25,14 +25,14 @@ textbox {
   -moz-border-bottom-colors: ThreeDHighlight ThreeDLightShadow;
   -moz-border-left-colors: ThreeDShadow ThreeDDarkShadow;
   padding: 2px 2px 3px;
-  -moz-padding-start: 4px;
+  padding-inline-start: 4px;
   background-color: -moz-Field;
   color: -moz-FieldText;
 }
 
 #search-box {
   -moz-appearance: none;
-  -moz-padding-start: 8px;
+  padding-inline-start: 8px;
   border: 0px solid;
   border-radius: 22px;
   background: linear-gradient(to bottom, hsl(0, 0%, 97%) 0, #fff 100%);
