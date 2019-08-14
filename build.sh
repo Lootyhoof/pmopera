@@ -1,5 +1,5 @@
 #!/bin/bash
-NAME=camimoon
+NAME=pmopera
 VER=${1:-dev}
 rm $NAME-$VER-pm.xpi
 cd src/
