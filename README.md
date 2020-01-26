@@ -1,5 +1,5 @@
 # PMOpera
-![Preview](http://i68.tinypic.com/124dawl.png)
+![Preview](https://i.imgur.com/4C9cFGd.png)
 
 Fork of the theme "FXOpera" by dkgo for Pale Moon.
 
