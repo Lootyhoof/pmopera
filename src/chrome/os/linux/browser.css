@@ -43,6 +43,73 @@
   --appmenu-box-shadow: 0 1px 0 rgba(227,227,227,.52) inset;
 }
 
+/* ::::: fullscreen window controls ::::: */
+
+#window-controls {
+  -moz-box-align: start;
+  /* Make sure the window controls are always last on the toolbar */
+  -moz-box-ordinal-group: 100;
+  margin-inline-start: 4px;
+}
+
+#main-window[tabsontop=false] #window-controls {
+  margin-inline-end: -5px;
+  margin-top: -3px;
+}
+
+#minimize-button,
+#restore-button,
+#close-button {
+  -moz-appearance: none;
+  border-style: none;
+  list-style-image: url("chrome://global/skin/icons/windowControls.png");
+  margin: 0;
+  padding: 0;
+}
+
+#minimize-button {
+  -moz-image-region: rect(0, 30px, 20px, 0);
+}
+
+#minimize-button:hover {
+  -moz-image-region: rect(20px, 30px, 40px, 0);
+}
+
+#minimize-button:hover:active {
+  -moz-image-region: rect(40px, 30px, 60px, 0);
+}
+
+#restore-button {
+  -moz-image-region: rect(0, 84px, 20px, 57px);
+}
+
+#restore-button:hover {
+  -moz-image-region: rect(20px, 84px, 40px, 57px);
+}
+
+#restore-button:hover:active {
+  -moz-image-region: rect(40px, 84px, 60px, 57px);
+}
+
+#close-button {
+  -moz-image-region: rect(0, 132px, 20px, 84px);
+  padding-inline-end: 2px;
+}
+
+#close-button:hover {
+  -moz-image-region: rect(20px, 132px, 40px, 84px);
+}
+
+#close-button:hover:active {
+  -moz-image-region: rect(40px, 132px, 60px, 84px);
+}
+
+#minimize-button:-moz-locale-dir(rtl),
+#restore-button:-moz-locale-dir(rtl),
+#close-button:-moz-locale-dir(rtl) {
+  transform: scaleX(-1);
+}
+
 /* Private browsing indicator */
 
 #main-window[privatebrowsingmode=temporary] #toolbar-menubar[autohide="false"] ~ #TabsToolbar::before {

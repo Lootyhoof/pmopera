@@ -599,8 +599,8 @@ toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar):not(#addon-bar):no
   padding-inline-end: 2px;
 }
 
-toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#addon-bar):not(.devtools-tabbar):not(.devtools-toolbar) .toolbarbutton-1,
-toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#addon-bar):not(.devtools-tabbar):not(.devtools-toolbar) toolbarbutton {
+:-moz-any(#nav-bar, #customToolbars, #PersonalToolbar)  .toolbarbutton-1,
+:-moz-any(#nav-bar, #customToolbars, #PersonalToolbar)  toolbarbutton:not(:-moz-any(#minimize-button, #restore-button, #close-button)) {
   padding: 0px;
   margin-top: 0px; 
   margin-bottom: 0px; 
@@ -628,19 +628,19 @@ toolbar[mode="text"] toolbarbutton .toolbarbutton-text {
   box-shadow: none !important;
 }
 
-toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#addon-bar):not(.devtools-tabbar):not(.devtools-toolbar) .toolbarbutton-1:not([open="true"]):not([checked="true"]):not([disabled="true"]):not(:active):hover,
-toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#addon-bar):not(.devtools-tabbar):not(.devtools-toolbar) toolbarbutton:not([open="true"]):not([checked="true"]):not([disabled="true"]):not(:active):hover {
+:-moz-any(#nav-bar, #customToolbars, #PersonalToolbar)  .toolbarbutton-1:not([open="true"]):not([checked="true"]):not([disabled="true"]):not(:active):hover,
+:-moz-any(#nav-bar, #customToolbars, #PersonalToolbar)  toolbarbutton:not([open="true"]):not([checked="true"]):not([disabled="true"]):not(:active):hover {
   border-color: var(--toolbarbutton-hover-border);
   background-color: var(--toolbarbutton-hover-background);
   box-shadow: var(--toolbarbutton-hover-box-shadow);
 }
 
-toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#addon-bar):not(.devtools-tabbar):not(.devtools-toolbar) .toolbarbutton-1:hover:active:not([disabled="true"]),
-toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#addon-bar):not(.devtools-tabbar):not(.devtools-toolbar) .toolbarbutton-1[checked="true"]:not([disabled="true"]),
-toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#addon-bar):not(.devtools-tabbar):not(.devtools-toolbar) .toolbarbutton-1[open="true"]:not([disabled="true"]),
-toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#addon-bar):not(.devtools-tabbar):not(.devtools-toolbar) toolbarbutton:hover:active:not([disabled="true"]),
-toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#addon-bar):not(.devtools-tabbar):not(.devtools-toolbar) toolbarbutton[checked="true"]:not([disabled="true"]),
-toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#addon-bar):not(.devtools-tabbar):not(.devtools-toolbar) toolbarbutton[open="true"]:not([disabled="true"]) {
+:-moz-any(#nav-bar, #customToolbars, #PersonalToolbar)  .toolbarbutton-1:hover:active:not([disabled="true"]),
+:-moz-any(#nav-bar, #customToolbars, #PersonalToolbar)  .toolbarbutton-1[checked="true"]:not([disabled="true"]),
+:-moz-any(#nav-bar, #customToolbars, #PersonalToolbar)  .toolbarbutton-1[open="true"]:not([disabled="true"]),
+:-moz-any(#nav-bar, #customToolbars, #PersonalToolbar)  toolbarbutton:hover:active:not([disabled="true"]),
+:-moz-any(#nav-bar, #customToolbars, #PersonalToolbar)  toolbarbutton[checked="true"]:not([disabled="true"]),
+:-moz-any(#nav-bar, #customToolbars, #PersonalToolbar)  toolbarbutton[open="true"]:not([disabled="true"]) {
   border-color: var(--toolbarbutton-active-border);
   background-color: var(--toolbarbutton-active-background);
   box-shadow: var(--toolbarbutton-active-box-shadow);
@@ -861,45 +861,6 @@ toolbar[brighttext] #tabview-button {
 
 #PersonalToolbar .toolbarbutton-menubutton-dropmarker {
   margin-inline-end: -2px;
-}
-
-/* ::::: fullscreen window controls ::::: */
-
-#minimize-button,
-#restore-button,
-#close-button {
-  -moz-appearance: none!important;
-  list-style-image: url("chrome://global/skin/icons/windowControls.png")!important;
-  padding: 0!important;
-  margin: 0 !important; 
-}
-
-#minimize-button {
-  -moz-image-region: rect(0, 30px, 20px, 0)!important;
-}
-#minimize-button:hover {
-  -moz-image-region: rect(20px, 30px, 40px, 0)!important;
-}
-#minimize-button:hover:active {
-  -moz-image-region: rect(40px, 30px, 60px, 0)!important;
-}
-#restore-button {
-  -moz-image-region: rect(0, 84px, 20px, 57px)!important;
-}
-#restore-button:hover {
-  -moz-image-region: rect(20px, 84px, 40px, 57px)!important;
-}
-#restore-button:hover:active {
-  -moz-image-region: rect(40px, 84px, 60px, 57px)!important;
-}
-#close-button {
-  -moz-image-region: rect(0, 132px, 20px, 84px)!important;
-}
-#close-button:hover {
-  -moz-image-region: rect(20px, 132px, 40px, 84px)!important;
-}
-#close-button:hover:active {
-  -moz-image-region: rect(40px, 132px, 60px, 84px)!important;
 }
 
 /* ::::: Location Bar ::::: */
@@ -2748,35 +2709,6 @@ toolbar:-moz-lwtheme,
 #main-window[sizemode=fullscreen]:not(:-moz-lwtheme) {
   -moz-appearance: none;
   background-color: #3475D1;
-}
-
-/* ::::: fullscreen window controls ::::: */
-
-#window-controls {
-  -moz-box-align: start;
-}
-
-#minimize-button,
-#restore-button,
-#close-button {
-  -moz-appearance: none;
-  border-style: none;
-  margin: 0;
-}
-#close-button {
-  -moz-image-region: rect(0, 49px, 16px, 32px);
-}
-#close-button:hover {
-  -moz-image-region: rect(16px, 49px, 32px, 32px);
-}
-#close-button:hover:active {
-  -moz-image-region: rect(32px, 49px, 48px, 32px);
-}
-
-#minimize-button:-moz-locale-dir(rtl),
-#restore-button:-moz-locale-dir(rtl),
-#close-button:-moz-locale-dir(rtl) {
-  transform: scaleX(-1);
 }
 
 /* ::::: splitmenu highlight style that imitates Windows 7 start menu ::::: */
