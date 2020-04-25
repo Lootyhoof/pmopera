@@ -1447,31 +1447,31 @@ richlistitem[type~="action"][actiontype="switchtab"][selected="true"] > .ac-url-
 }
 
 .tabbrowser-tabs > .tabbrowser-tab:first-child > .tab-stack > .tab-content:not([selected="true"]) {
-  -moz-border-image: url("chrome://browser/skin/tabbrowser/tab.png") 2 3 fill repeat stretch;
+  border-image: url("chrome://browser/skin/tabbrowser/tab.png") 2 3 fill repeat stretch;
 }
 
 .tabbrowser-tabs > .tabbrowser-tab:hover:first-child > .tab-stack > .tab-content:not([selected="true"]) {
-  -moz-border-image: url("chrome://browser/skin/tabbrowser/tab_hover.png") 2 3 fill repeat stretch;
+  border-image: url("chrome://browser/skin/tabbrowser/tab_hover.png") 2 3 fill repeat stretch;
 }
 
 .tabbrowser-tabs > .tabbrowser-tab:not(:first-child):not(:last-child) > .tab-stack > .tab-content:not([selected="true"]) {
-  -moz-border-image: url("chrome://browser/skin/tabbrowser/tab2.png") 2 3 fill repeat stretch;
+  border-image: url("chrome://browser/skin/tabbrowser/tab2.png") 2 3 fill repeat stretch;
 }
 
 .tabbrowser-tabs > .tabbrowser-tab:hover:not(:first-child):not(:last-child) > .tab-stack > .tab-content:not([selected="true"]) {
-  -moz-border-image: url("chrome://browser/skin/tabbrowser/tab_hover2.png") 2 3 fill repeat stretch;
+  border-image: url("chrome://browser/skin/tabbrowser/tab_hover2.png") 2 3 fill repeat stretch;
 }
 
 .tabbrowser-tabs > .tabbrowser-tab:last-child > .tab-stack > .tab-content:not([selected="true"]) {
-  -moz-border-image: url("chrome://browser/skin/tabbrowser/tab3.png") 2 3 fill repeat stretch;
+  border-image: url("chrome://browser/skin/tabbrowser/tab3.png") 2 3 fill repeat stretch;
 }
 
 .tabbrowser-tabs > .tabbrowser-tab:hover:last-child > .tab-stack > .tab-content:not([selected="true"]) {
-  -moz-border-image: url("chrome://browser/skin/tabbrowser/tab_hover3.png") 2 3 fill repeat stretch;
+  border-image: url("chrome://browser/skin/tabbrowser/tab_hover3.png") 2 3 fill repeat stretch;
 }
 
 .tabbrowser-tab > .tab-stack > .tab-content[selected="true"] {
-  -moz-border-image: url("chrome://browser/skin/tabbrowser/tab_active.png") 2 3 fill repeat stretch;
+  border-image: url("chrome://browser/skin/tabbrowser/tab_active.png") 2 3 fill repeat stretch;
 }
 
 .tabbrowser-tab:-moz-lwtheme-brighttext > * > .tab-content,
@@ -1518,11 +1518,11 @@ richlistitem[type~="action"][actiontype="switchtab"][selected="true"] > .ac-url-
 }
 
 .tabbrowser-tab[pinned][titlechanged] > .tab-stack > .tab-content {
-  -moz-border-image: url("chrome://browser/skin/tabbrowser/attention.png") 2 3 fill stretch stretch !important;
+  border-image: url("chrome://browser/skin/tabbrowser/attention.png") 2 3 fill stretch stretch !important;
 }
 
 .tabbrowser-tab[pinned][titlechanged]:last-child  > .tab-stack > .tab-content {
-  -moz-border-image: url("chrome://browser/skin/tabbrowser/attention2.png") 2 3 fill stretch stretch !important;
+  border-image: url("chrome://browser/skin/tabbrowser/attention2.png") 2 3 fill stretch stretch !important;
 }
 
 .tabbrowser-tabbox {
