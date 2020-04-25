@@ -27,6 +27,7 @@
   --toolbar-highlight-top: rgba(250,250,250,1);
   --toolbar-highlight-bottom: transparent;
 
+  --toolbarbutton-color: rgb(12, 12, 12);
   --toolbarbutton-active-background: rgba(255, 255, 255, .5);
   --toolbarbutton-active-border: rgba(0, 0, 0, .247);
   --toolbarbutton-active-box-shadow: 0 1px 0 0 var(--toolbarbutton-active-background), inset 0 1px 1px 0 rgba(223, 223, 223, .53);
@@ -79,6 +80,7 @@
 #navigator-toolbox > toolbar:not(:-moz-lwtheme) {
   -moz-appearance: none;
   border-style: none;
+  color: var(--toolbarbutton-color);
   background-color: var(--toolbar-custom-color);
 }
 
@@ -401,7 +403,7 @@ toolbar menupopup {
 }
 
 .bookmark-item > .toolbarbutton-text:not(:-moz-lwtheme) {
-  color: #0C0C0C;
+  color: var(--toolbarbutton-color);
 }
 
 .bookmark-item:-moz-lwtheme {
@@ -608,7 +610,6 @@ toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar):not(#addon-bar):no
   background-clip: padding-box;
   border: 1px solid;
   border-color: transparent;
-  color: #6D6D6D;
   border-radius: 0;
   transition: background-color 0.1s, border-color 0.1s, box-shadow 0.1s;
 }
