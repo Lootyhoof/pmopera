@@ -976,9 +976,12 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
   -moz-appearance: none;
   padding: 0;
   padding-inline-start: 4px;
-  padding-inline-end: 5px;
   margin: 0;
   box-shadow: 4px 0 0 -3px #CCCCCC;
+}
+
+#identity-box.unknownIdentity {
+  padding-inline-end: 5px;
 }
 
 #identity-icon-labels {
@@ -992,6 +995,10 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain {
   color: #3D6F99;
+}
+
+#urlbar[pageproxystate="valid"] > #identity-box.mixedContent {
+  color: #99933d;
 }
 
 #identity-box:-moz-focusring {
