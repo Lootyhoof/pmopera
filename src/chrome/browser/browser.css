@@ -980,7 +980,7 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
   box-shadow: 4px 0 0 -3px #CCCCCC;
 }
 
-#identity-box.unknownIdentity {
+#urlbar:not([security_level]) > #identity-box {
   padding-inline-end: 5px;
 }
 

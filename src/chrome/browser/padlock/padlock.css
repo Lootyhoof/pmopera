@@ -31,18 +31,10 @@
 }
 
 #padlock-ib:hover {
-  -moz-image-region: rect(0px 30px 16px 14px);
-}
-
-#padlock-ib:hover:active {
-  -moz-image-region: rect(0px 44px 16px 28px);
-}
-
-#padlock-ib[padshow="ib-trans-bg"][level="broken"]:hover {
   -moz-image-region: rect(0px 32px 16px 16px);
 }
 
-#padlock-ib[padshow="ib-trans-bg"][level="broken"]:hover:active {
+#padlock-ib:hover:active {
   -moz-image-region: rect(0px 48px 16px 32px);
 }
 
@@ -72,18 +64,10 @@
 }
 
 #padlock-ib-left:hover {
-  -moz-image-region: rect(0px 30px 16px 14px);
-}
-
-#padlock-ib-left:hover:active {
-  -moz-image-region: rect(0px 44px 16px 28px);
-}
-
-#padlock-ib-left[padshow="ib-left"][level="broken"]:hover {
   -moz-image-region: rect(0px 32px 16px 16px);
 }
 
-#padlock-ib-left[padshow="ib-left"][level="broken"]:hover:active {
+#padlock-ib-left:hover:active {
   -moz-image-region: rect(0px 48px 16px 32px);
 }
 
@@ -112,18 +96,10 @@
 }
 
 #padlock-ub-right:hover {
-  -moz-image-region: rect(0px 30px 16px 14px);
-}
-
-#padlock-ub-right:hover:active {
-  -moz-image-region: rect(0px 44px 16px 28px);
-}
-
-#padlock-ub-right[padshow="ub-right"][level="broken"]:hover {
   -moz-image-region: rect(0px 32px 16px 16px);
 }
 
-#padlock-ub-right[padshow="ub-right"][level="broken"]:hover:active {
+#padlock-ub-right:hover:active {
   -moz-image-region: rect(0px 48px 16px 32px);
 }
 
@@ -152,18 +128,10 @@
 }
 
 #padlock-sb:hover {
-  -moz-image-region: rect(0px 30px 16px 14px);
-}
-
-#padlock-sb:hover:active {
-  -moz-image-region: rect(0px 44px 16px 28px);
-}
-
-#padlock-sb[padshow="statbar"][level="broken"]:hover {
   -moz-image-region: rect(0px 32px 16px 16px);
 }
 
-#padlock-sb[padshow="statbar"][level="broken"]:hover:active {
+#padlock-sb:hover:active {
   -moz-image-region: rect(0px 48px 16px 32px);
 }
 
@@ -192,17 +160,9 @@
 }
 
 #padlock-tab:hover {
-  -moz-image-region: rect(0px 30px 16px 14px);
-}
-
-#padlock-tab:hover:active {
-  -moz-image-region: rect(0px 44px 16px 28px);
-}
-
-#padlock-tab[padshow="tabs-bar"][level="broken"]:hover {
   -moz-image-region: rect(0px 32px 16px 16px);
 }
 
-#padlock-tab[padshow="tabs-bar"][level="broken"]:hover:active {
+#padlock-tab:hover:active {
   -moz-image-region: rect(0px 48px 16px 32px);
 }
