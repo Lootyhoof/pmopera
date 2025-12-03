@@ -529,8 +529,7 @@ toolbar[brighttext] .toolbarbutton-1 {
   list-style-image: var(--toolbarbutton-inverted-image);
 }
 
-@media (-moz-os-version: windows-vista),
-       (-moz-os-version: windows-win7) {
+@media (-moz-os-version: windows-win7) {
   #toolbar-menubar :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #alltabs-button, #tabview-button, #webrtc-status-button):not(:-moz-any(#alltabs-button,#tabview-button,#new-tab-button,#sync-button[status])) > .toolbarbutton-icon:not(:-moz-lwtheme),
   #TabsToolbar[tabsontop=true] :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #alltabs-button, #tabview-button, #webrtc-status-button):not(:-moz-any(#alltabs-button,#tabview-button,#new-tab-button,#sync-button[status])) > .toolbarbutton-icon:not(:-moz-lwtheme) {
     list-style-image: var(--toolbarbutton-inverted-image);
@@ -1348,7 +1347,8 @@ richlistitem[type~="action"][actiontype="switchtab"][selected="true"] > .ac-url-
   margin-inline-start: -1px;
 }
 
-@media (-moz-os-version: windows-win10) {
+@media (-moz-os-version: windows-win10),
+       (-moz-os-version: windows-win11) {
   #main-window[sizemode="normal"] .tabbrowser-tabs {
     margin-inline-start: -1px;
   }
@@ -1711,8 +1711,7 @@ richlistitem[type~="action"][actiontype="switchtab"][selected="true"] > .ac-url-
 
 /* Tab scrollbox arrow, tabstrip new tab and all-tabs buttons */
 
-@media (-moz-os-version: windows-vista),
-       (-moz-os-version: windows-win7) {
+@media (-moz-os-version: windows-win7) {
   #main-window[tabsontop="true"] .tabbrowser-arrowscrollbox > .scrollbutton-up:not(:-moz-lwtheme),
   #main-window[tabsontop="true"] .tabbrowser-arrowscrollbox > .scrollbutton-down:not(:-moz-lwtheme) {
     list-style-image: url(chrome://browser/skin/tabbrowser/tab-arrow-left.png);
@@ -1768,8 +1767,7 @@ toolbar[brighttext] .tabbrowser-arrowscrollbox > .scrollbutton-down {
   border-image: url("chrome://browser/skin/tabbrowser/tab-overflow-border.png") 0 2 0 2 fill;
 }
 
-@media (-moz-os-version: windows-vista),
-       (-moz-os-version: windows-win7) {
+@media (-moz-os-version: windows-win7) {
   #main-window[tabsontop="true"] .tabs-newtab-button:not(:-moz-lwtheme) {
      list-style-image: url(chrome://browser/skin/tabbrowser/add.png);
   }
@@ -1798,8 +1796,7 @@ toolbar[brighttext] .tabs-newtab-button {
    list-style-image: url(chrome://browser/skin/tabbrowser/add.png);
 }
 
-@media (-moz-os-version: windows-vista),
-       (-moz-os-version: windows-win7) {
+@media (-moz-os-version: windows-win7) {
   #TabsToolbar[tabsontop="true"] > #new-tab-button:not(:-moz-lwtheme),
   #TabsToolbar[tabsontop="true"] > toolbarpaletteitem > #new-tab-button:not(:-moz-lwtheme) {
     list-style-image: url(chrome://browser/skin/tabbrowser/add.png);
@@ -1823,8 +1820,7 @@ toolbar[brighttext] .tabs-newtab-button {
   list-style-image: url(chrome://browser/skin/tabbrowser/add.png);
 }
 
-@media (-moz-os-version: windows-vista),
-       (-moz-os-version: windows-win7) {
+@media (-moz-os-version: windows-win7) {
   #main-window[tabsontop="true"] #alltabs-button:not(:-moz-lwtheme) {
     list-style-image: url(chrome://browser/skin/tabbrowser/tab_list.png);
   }
@@ -2721,8 +2717,7 @@ toolbar:-moz-lwtheme,
 }
 
 /* ::::: splitmenu highlight style that imitates Windows 7 start menu ::::: */
-@media (-moz-os-version: windows-vista) and (-moz-windows-default-theme),
-       (-moz-os-version: windows-win7) and (-moz-windows-default-theme) {
+@media (-moz-os-version: windows-win7) and (-moz-windows-default-theme) {
   .splitmenu-menuitem,
   .splitmenu-menu {
     -moz-appearance: none;
